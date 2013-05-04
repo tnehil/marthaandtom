@@ -58,4 +58,84 @@ function marthom_comment($comment, $args, $depth) {
 	<?php
 }
 
+
+
+//a modification of comments popup link to exclude trackbacks/pingbacks from displayed total
+function just_comments_popup_link( $zero = false, $one = false, $more = false, $css_class = '', $none = false ) {
+	global $wpcommentspopupfile, $wpcommentsjavascript;
+
+	$id = get_the_ID();
+
+	if ( false === $zero ) $zero = __( 'No Comments' );
+	if ( false === $one ) $one = __( '1 Comment' );
+	if ( false === $more ) $more = __( '% Comments' );
+	if ( false === $none ) $none = __( 'Comments Off' );
+
+	//$number = get_comments_number( $id );
+	$ping_count = $number = 0;
+	$comments = get_comments( $id );
+	foreach ( $comments as $comment ) 
+	get_comment_type($comment) == "comment" ? ++$number : ++$ping_count;
+	
+	if ( 0 == $number && !comments_open() && !pings_open() ) {
+		echo '<span' . ((!empty($css_class)) ? ' class="' . esc_attr( $css_class ) . '"' : '') . '>' . $none . '</span>';
+		return;
+	}
+
+	if ( post_password_required() ) {
+		echo __('Enter your password to view comments.');
+		return;
+	}
+
+	echo '<a href="';
+	if ( $wpcommentsjavascript ) {
+		if ( empty( $wpcommentspopupfile ) )
+			$home = home_url();
+		else
+			$home = get_option('siteurl');
+		echo $home . '/' . $wpcommentspopupfile . '?comments_popup=' . $id;
+		echo '" onclick="wpopen(this.href); return false"';
+	} else { // if comments_popup_script() is not in the template, display simple comment link
+		if ( 0 == $number )
+			echo get_permalink() . '#respond';
+		else
+			comments_link();
+		echo '"';
+	}
+
+	if ( !empty( $css_class ) ) {
+		echo ' class="'.$css_class.'" ';
+	}
+	$title = the_title_attribute( array('echo' => 0 ) );
+
+	echo apply_filters( 'comments_popup_link_attributes', '' );
+
+	echo ' title="' . esc_attr( sprintf( __('Comment on %s'), $title ) ) . '">';
+	just_comments_number( $id, $zero, $one, $more );
+	echo '</a>';
+}
+
+//count just comments, not pingbacks and trackbacks
+function just_comments_number( $id, $zero = false, $one = false, $more = false, $deprecated = '' ) {
+	if ( !empty( $deprecated ) )
+		_deprecated_argument( __FUNCTION__, '1.3' );
+		
+	
+	//$number = get_comments_number($id);
+	$ping_count = $number = 0;
+	$comments = get_comments(array('post_id' => $id));
+	foreach ( $comments as $comment ) 
+	get_comment_type($comment) == "comment" ? ++$number : ++$ping_count;
+
+	if ( $number > 1 )
+		$output = str_replace('%', number_format_i18n($number), ( false === $more ) ? __('% Comments') : $more);
+	elseif ( $number == 0 )
+		$output = ( false === $zero ) ? __('No Comments') : $zero;
+	else // must be one
+		$output = ( false === $one ) ? __('1 Comment') : $one;
+
+	echo apply_filters('comments_number', $output, $number);
+}
+
+
 ?>
