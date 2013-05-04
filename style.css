@@ -1,0 +1,383 @@
+/*
+Theme Name: Martha and Tom
+Theme URI: http://www.marthaandtom.com
+Description: A new approach to the Martha and Tom
+Version: 2.0
+Author: Tom Nehil
+*/
+
+/*RESET+CLEARFIX*/
+@import url('reset.css');
+@import url('clearfix.css');
+@import url('MyFontsWebfontsKit/MyFontsWebfontsKit.css');
+
+/*PAGE LAYOUT*/
+	body {
+		margin: 0 10% 0 10%;
+		max-width: 1200px;
+	}
+	
+	body.logged-in {
+		margin-top: 2em;
+	}
+	
+	.header {
+	}
+	
+	.main {
+		width: 80%;
+		float:left;
+		margin-bottom: 4em;
+	}
+	
+	.main img, .wp-caption, .wp-caption img {
+		max-width:100%;
+		height:auto;
+	}
+	
+	.post {
+		margin: 0 5% 20px 0;
+	}
+	
+	.sidebar {
+		width: 20%;
+		float:left;
+		margin-bottom: 4em;
+	}
+	
+	.footer {
+		clear:both;
+		border-top: 1px solid #ccc;
+		padding-top: 1em;
+		margin-bottom: 1em;
+	}
+	
+/*General Typographic*/
+
+body {
+	font-family: 'Baskerville', 'Georgia', Serif ;
+	text-rendering: optimizeLegibility;
+	font-size: 1em;
+	line-height: 1.4;
+	color: #333333;
+}
+
+a {
+	color: #f93;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Populaire', 'Helvetica', Sans-Serif;
+	margin: .5em 0 .15em; 0;
+	color: #666;
+	clear: both;
+}
+
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1 {font-size: 2.5em;	color:#333;}
+h2 {font-size: 1.75em;	color:#ff9933;}
+h3 {font-size: 1.5em;	color:#333;}
+h4 {font-size: 1.3em;
+		border-bottom: #ccc 1px solid;
+		padding-bottom: .4em;
+		margin-bottom: .75em;
+		margin-top: .5em;
+	} 
+	
+h3.postmeta {font-family: 'PopulaireLight', 'Helvetica', Sans-Serif; margin-top:-.5em;}
+	
+.footer {font-family: 'PopulaireLight', 'Helvetica', Sans-Serif; font-size:1.4em;}
+.orange, .orange a {color: #f93;}
+.grey, .grey a {color: #999;}
+strong {font-weight: 700;}
+em {font-style: italic;}
+
+blockquote {
+	font-family: 'Helvetica','Sans-serif';
+	font-size: .9em;
+	font-weight: 100;
+	line-height: 1.6em;
+	color: 333;
+	border-left: #ff9933 10px solid;
+	padding-left: .6em;
+	margin-left: .8em;
+	margin-right: 4em;
+}
+
+	/*General Rules for Lists*/
+		ol {
+			counter-reset: li;
+			margin-left: 0;
+			padding-left:0;
+			margin-bottom: 1em;
+		}
+		
+		ol > li {
+			position: relative;
+			margin-left: 2em;
+			list-style: none;
+			font-family: 'Helvetica', 'Sans-serif';
+			font-size: .9em;
+			font-weight: 100;
+			line-height: 1.4em;
+			color: #333;
+		}
+		
+		ol > li:before {
+			content: counter(li);
+			counter-increment: li;
+			position: absolute;
+			top: -2em;
+			left: -3em;
+			margin-right: 2em;
+			padding: 2em;
+			color: #ff9933;
+			font-family: 'Populaire';
+		}
+		
+		ul {
+			font-family: 'Helvetica', 'Sans-serif';
+			font-size: .9em;
+			font-weight: 100;
+			line-height: 1.4em;
+			color: #333;
+			list-style-type: none;
+			padding-left: 0;
+			margin-left: 0;
+			margin-bottom: 1em;
+		}
+		
+		ul > li:before {  
+			content: "#";
+			font-family: 'Helvetica', 'sans-serif';
+			font-weight: 700;
+			color: #ff9933;
+			margin-right: .7em;
+			margin-left: .8em;
+		}
+		
+	/*End lists*/
+	
+.alignright {float:right;}
+.alignleft {float:left;}
+img.alignright, .wp-caption.alignright {margin: .3em 0 .5em 1em;}
+img.alignleft, .wp-caption.alignleft {margin: .3em 1em .5em 0;}
+
+.wp-caption img {width:100%;}
+
+/*Rules that apply to body text*/
+
+.entry p {
+	margin-bottom: .45em;
+	margin-top: 0em;
+}
+
+.wp-caption-text {
+	font-family: 'Helvetica';
+	color: #999;
+	padding: 0;
+	margin: 0;
+	font-size: .75em;
+	text-align: right;
+}
+
+.post-info {
+	padding-top: 1em;
+	font-family: "Helvetica";
+	font-size: .75em;
+	color: #666;
+}
+
+.navigation, .postnavigation {
+	margin-bottom: 4em;
+	font-family: "Populaire","Helvetica",Sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+	color: #999;
+}
+
+.navigation a, .postnavigation a {
+	text-decoration:none;
+	color: #444;
+}
+
+
+.postnavigation {
+	border-radius: 4px;
+	background-color: #EBEBEB;
+	padding: .3em .6em .3em .6em;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.postnavigation span {white-space:nowrap;}
+
+/*End body text rules*/
+
+/*Styling the comments and form*/
+
+.avatar {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+
+.commentlist, .commentlist li {
+	list-style-type:none;
+	margin: 0;
+	clear:both;
+}
+
+.commentlist li {margin-bottom:2em; clear:both;}
+.commentlist li div{display:inline-block;}
+.commentlist li:before { content: none;}
+
+.commentbody{width:85%;}
+
+.children {list-style-type:none; margin-left:6em;}
+.children li {list-style-type:none;padding:15px;background-color:#efefef;}
+.children li .commentbody {width:80%;}
+
+
+textarea#comment {border-color: #ccc;}
+
+
+.commentauthor {
+	font-family: 'Populaire', 'Helvetica', Sans-Serif;
+	font-size: 1.6em;
+}
+
+.commentmeta, .commentmeta a {
+	font-family: 'Helvetica',Sans-serif;
+	font-size: 1em;
+	text-decoration: none;
+	margin-left: .3em;
+}
+
+#commentform p {margin-bottom:10px;}
+#commentform input[type=text] {height:1.6em;
+							   width:30em;
+							   border:1px solid #ccc;}
+#commentform textarea {margin-left:0;}
+
+a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
+
+/*End comments styles*/
+
+/*Rules specific to the Header*/
+
+.header h1 {
+	font-size: 5em;
+	font-family: 'PopulaireLight';
+	display: inline;
+	line-height: 1em;
+}
+
+.plus {
+	font-family: 'Helvetica';
+	color: #ff9933;
+	position: relative;
+	top: -.10em;
+	margin-left: .04em;
+	font-weight: 700;
+} 
+
+.header .navigation {
+	float: right;
+	list-style-type: none;
+	margin: 0;
+	position: absolute;
+	bottom: .4em;
+	right: 0;
+}
+
+.header .navigation li {
+		float: left;
+		font-family: 'Populaire';
+		font-size: 1.5em;
+		color: #333;
+}
+
+.header .navigation li:before {
+	content: "#";
+	font-family: 'Helvetica';
+	font-size: .75em;
+	font-weight: 700;
+	color: #ff9933;
+	margin-right: .155em;
+	padding-left: 1em;
+}
+
+.header {
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+
+/* End Header Styles*/
+
+/*Sidebar Specific Styles*/
+
+.sidebar {
+	margin-top: 2em;
+	list-style-type: none;
+	font-size: .8em;
+	line-height: 1.6;
+}
+
+.sidebar li {
+	margin-top: 1.25em;
+	border-top: #ccc 1px solid;
+	padding-left: 1em;
+	font-family: 'Helvetica';
+	color: #000;
+}
+
+.sidebar li:before {
+	content: none;
+}
+
+.sidebar h2 {
+	font-family: 'PopulaireLight';
+	font-size: 1.8em;
+	color: #666;
+}
+
+.sidebar li li {
+	border: none;
+	margin: 0;
+	padding:0;
+	color: #f93;
+}
+
+.sidebar li li a {
+	color: #333;
+	text-decoration: none;
+}
+
+#searchform input {
+	border: 1px solid #999;
+	width:100%;
+	padding: .3em 0 .3em .3em;
+	font-size: 1.4em;
+	font-family: 'Populaire','Helvetica',Sans-serif;
+	color: #000;
+}
+
+
+/*End sidebar*/
+
+/*Media Queries*/
+
+@media only screen and (max-width: 946px) {.commentlist li div{display:block;}}
+
+@media only screen and (max-width: 650px) {
+	.header {position:inherit;}
+	.header h1{width:100%;display:block;}
+	.header .navigation{display:none;}
+	.main,.sidebar {width: 100%;}
+	.main .navigation {margin:0;}
+	.commentlist li div{display:block;}
+}
