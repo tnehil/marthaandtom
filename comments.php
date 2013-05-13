@@ -20,7 +20,7 @@
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
-	<h3 id="comments"><?php just_comments_number(__($id, 'No comments', 'marthaandtom'), __('One comment', 'marthaandtom'), __('% comments', 'marthaandtom'));?> <?php printf(__('on &#8220;%s&#8221;', 'marthaandtom'), the_title('', '', false)); ?></h3>
+	<h3 id="comments"><?php just_comments_number($id,__('No comments', 'marthaandtom'), __('One comment', 'marthaandtom'), __('% comments', 'marthaandtom'));?> <?php printf(__('on &#8220;%s&#8221;', 'marthaandtom'), the_title('', '', false)); ?></h3>
 
 
 	<ol class="commentlist">
