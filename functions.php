@@ -6,20 +6,20 @@ if ( function_exists('register_sidebar') )
 	'before_title' => '<h2>',
 	'after_title' => '</h2>',
 	));
-	
+
 if (function_exists('register_nav_menus'))
  register_nav_menu( 'main', 'main menu' );
- 
-add_theme_support( 'post-thumbnails' ); 
 
-//Default avatars 
-add_filter( 'avatar_defaults', 'newgravatar' );  
-  
-function newgravatar ($avatar_defaults) {  
-    $myavatar = 'http://www.marthaandtom.com/images/defaultgravatar.png';  
-    $avatar_defaults[$myavatar] = "Martha and Tom Default";  
-    return $avatar_defaults;  
-}   
+add_theme_support( 'post-thumbnails' );
+
+//Default avatars
+add_filter( 'avatar_defaults', 'newgravatar' );
+
+function newgravatar ($avatar_defaults) {
+    $myavatar = 'http://www.marthaandtom.com/images/defaultgravatar.png';
+    $avatar_defaults[$myavatar] = "Martha and Tom Default";
+    return $avatar_defaults;
+}
 
 //Twitter card details
 add_filter( 'twitter_cards_properties', 'twitter_custom' );
@@ -74,9 +74,9 @@ function just_comments_popup_link( $zero = false, $one = false, $more = false, $
 	//$number = get_comments_number( $id );
 	$ping_count = $number = 0;
 	$comments = get_comments( $id );
-	foreach ( $comments as $comment ) 
+	foreach ( $comments as $comment )
 	get_comment_type($comment) == "comment" ? ++$number : ++$ping_count;
-	
+
 	if ( 0 == $number && !comments_open() && !pings_open() ) {
 		echo '<span' . ((!empty($css_class)) ? ' class="' . esc_attr( $css_class ) . '"' : '') . '>' . $none . '</span>';
 		return;
@@ -119,12 +119,12 @@ function just_comments_popup_link( $zero = false, $one = false, $more = false, $
 function just_comments_number( $id, $zero = false, $one = false, $more = false, $deprecated = '' ) {
 	if ( !empty( $deprecated ) )
 		_deprecated_argument( __FUNCTION__, '1.3' );
-		
-	
+
+
 	//$number = get_comments_number($id);
 	$ping_count = $number = 0;
 	$comments = get_comments(array('post_id' => $id));
-	foreach ( $comments as $comment ) 
+	foreach ( $comments as $comment )
 	get_comment_type($comment) == "comment" ? ++$number : ++$ping_count;
 
 	if ( $number > 1 )
@@ -137,5 +137,21 @@ function just_comments_number( $id, $zero = false, $one = false, $more = false, 
 	echo apply_filters('comments_number', $output, $number);
 }
 
+//More results for archive and search pages
+add_action( 'pre_get_posts', 'my_post_queries' );
+function my_post_queries( $query ) {
+
+	// if not a wp-admin page and it is the main query
+	if ( !is_admin() && $query->is_main_query() ) {
+
+		// if not the home page
+		if ( ! is_home() ) {
+
+			// set posts_per_page to 99 posts
+			$query->set( 'posts_per_page', 10 );
+		}
+
+	}
+}
 
 ?>
