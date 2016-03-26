@@ -16,36 +16,36 @@ Author: Tom Nehil
 		margin: 0 10% 0 10%;
 		max-width: 1200px;
 	}
-	
+
 	body.logged-in {
 		margin-top: 2em;
 	}
-	
+
 	.header {
 	}
-	
+
 	.main {
 		width:100%;
 		float:left;
 		margin-bottom: 4em;
 	}
-	
+
 	.main img, .wp-caption, .wp-caption img {
 		max-width:100%;
 		height:auto;
 	}
-	
+
 	.post {
 		margin: 0 5% 20px 0;
 	}
-	
+
 	.footer {
 		clear:both;
 		border-top: 1px solid #ccc;
 		padding-top: 1em;
 		margin-bottom: 1em;
 	}
-	
+
 /*General Typographic*/
 
 body {
@@ -80,10 +80,10 @@ h4 {font-size: 1.3em;
 		padding-bottom: .4em;
 		margin-bottom: .75em;
 		margin-top: .5em;
-	} 
-	
+	}
+
 h3.postmeta {font-family: 'PopulaireLight', 'Helvetica', Sans-Serif; margin-top:-.5em;}
-	
+
 .footer {font-family: 'PopulaireLight', 'Helvetica', Sans-Serif; font-size:1.4em;}
 .orange, .orange a {color: #f93;}
 .grey, .grey a {color: #999;}
@@ -109,7 +109,7 @@ blockquote {
 			padding-left:0;
 			margin-bottom: 1em;
 		}
-		
+
 		ol > li {
 			position: relative;
 			margin-left: 2em;
@@ -120,7 +120,7 @@ blockquote {
 			line-height: 1.4em;
 			color: #333;
 		}
-		
+
 		ol > li:before {
 			content: counter(li);
 			counter-increment: li;
@@ -132,7 +132,7 @@ blockquote {
 			color: #ff9933;
 			font-family: 'Populaire';
 		}
-		
+
 		ul {
 			font-family: 'Helvetica', 'Sans-serif';
 			font-size: .9em;
@@ -144,8 +144,8 @@ blockquote {
 			margin-left: 0;
 			margin-bottom: 1em;
 		}
-		
-		ul > li:before {  
+
+		ul > li:before {
 			content: "#";
 			font-family: 'Helvetica', 'sans-serif';
 			font-weight: 700;
@@ -153,9 +153,9 @@ blockquote {
 			margin-right: .7em;
 			margin-left: .8em;
 		}
-		
+
 	/*End lists*/
-	
+
 .alignright {float:right;}
 .alignleft {float:left;}
 img.alignright, .wp-caption.alignright {margin: .3em 0 .5em 1em;}
@@ -277,55 +277,32 @@ a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
 	top: -.10em;
 	margin-left: .04em;
 	font-weight: 700;
-} 
-
-.header .navigation {
-	float: right;
-	list-style-type: none;
-	margin: 0;
-	position: absolute;
-	bottom: .4em;
-	right: 0;
-}
-
-.header .navigation li {
-		float: left;
-		font-family: 'Populaire';
-		font-size: 1.5em;
-		color: #333;
-}
-
-.header .navigation li:before {
-	content: "#";
-	font-family: 'Helvetica';
-	font-size: .75em;
-	font-weight: 700;
-	color: #ff9933;
-	margin-right: .155em;
-	padding-left: 1em;
 }
 
 .header {
 	border-bottom: 1px solid #ccc;
 	position: relative;
+	width:100%;
 }
 
-/* End Header Styles*/
-
-/*Sidebar Specific Styles*/
-
+#searchform {
+	width:40%;
+	float:right;
+	margin: 0 2em;
+}
 
 #searchform input {
 	border: 1px solid #999;
 	width:100%;
+	margin: 1.5em 0 0 0;
 	padding: .3em 0 .3em .3em;
 	font-size: 1.4em;
 	font-family: 'Populaire','Helvetica',Sans-serif;
 	color: #000;
 }
 
+/* End Header Styles*/
 
-/*End sidebar*/
 
 /*Media Queries*/
 
@@ -337,5 +314,8 @@ a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
 	.header .navigation{display:none;}
 	.main,.sidebar {width: 100%;}
 	.main .navigation {margin:0;}
+	.post h1{line-height: 1em;}
 	.commentlist li div{display:block;}
+	#searchform{width: 100%; margin: 0 0 1em;}
+	#searchform input{margin-top:0;}
 }
