@@ -25,7 +25,7 @@ Author: Tom Nehil
 	}
 	
 	.main {
-		width: 80%;
+		width:100%;
 		float:left;
 		margin-bottom: 4em;
 	}
@@ -37,12 +37,6 @@ Author: Tom Nehil
 	
 	.post {
 		margin: 0 5% 20px 0;
-	}
-	
-	.sidebar {
-		width: 20%;
-		float:left;
-		margin-bottom: 4em;
 	}
 	
 	.footer {
@@ -320,42 +314,6 @@ a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
 
 /*Sidebar Specific Styles*/
 
-.sidebar {
-	margin-top: 2em;
-	list-style-type: none;
-	font-size: .8em;
-	line-height: 1.6;
-}
-
-.sidebar li {
-	margin-top: 1.25em;
-	border-top: #ccc 1px solid;
-	padding-left: 1em;
-	font-family: 'Helvetica';
-	color: #000;
-}
-
-.sidebar li:before {
-	content: none;
-}
-
-.sidebar h2 {
-	font-family: 'PopulaireLight';
-	font-size: 1.8em;
-	color: #666;
-}
-
-.sidebar li li {
-	border: none;
-	margin: 0;
-	padding:0;
-	color: #f93;
-}
-
-.sidebar li li a {
-	color: #333;
-	text-decoration: none;
-}
 
 #searchform input {
 	border: 1px solid #999;
