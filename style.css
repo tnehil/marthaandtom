@@ -78,7 +78,10 @@ h4 {font-size: 1.3em;
 		margin-top: .5em;
 	}
 
-h3.postmeta {font-family: 'PopulaireLight', 'Helvetica', Sans-Serif; margin-top:-.5em;}
+h3.postmeta {
+	font-family: 'PopulaireLight', 'Helvetica', Sans-Serif;
+	margin:-.5em 0 1em;
+}
 
 .footer {font-family: 'PopulaireLight', 'Helvetica', Sans-Serif; font-size:1.4em;}
 .orange, .orange a {color: #f93;}
@@ -172,9 +175,15 @@ img.alignleft, .wp-caption.alignleft {margin: .3em 1em .5em 0;}
 	font-family: 'Helvetica';
 	color: #999;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 1em;
 	font-size: .9em;
 	text-align: left;
+}
+
+p.tags {
+	margin-bottom: 2em;
+	font-size: .9em;
+	font-family: Helvetica, sans-serif;
 }
 
 .post-info {
@@ -187,7 +196,6 @@ img.alignleft, .wp-caption.alignleft {margin: .3em 1em .5em 0;}
 .navigation, .postnavigation {
 	margin-bottom: 4em;
 	font-family: "Populaire","Helvetica",Sans-serif;
-	font-weight: 700;
 	font-size: 1.5em;
 	color: #999;
 }
