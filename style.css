@@ -304,6 +304,15 @@ a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
 
 /* End Header Styles*/
 
+/*Footer styles*/
+.footer-nav {
+	margin-bottom: 1em;
+}
+
+.footer-nav select {
+	margin-top:-2em;
+}
+
 /*Archive page styles I guess?*/
 .archive-post-thumbnail {
 	float: right;
