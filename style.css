@@ -64,7 +64,6 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Populaire', 'Helvetica', Sans-Serif;
 	margin: .5em 0 .15em; 0;
 	color: #666;
-	clear: both;
 }
 
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
@@ -304,6 +303,12 @@ a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
 }
 
 /* End Header Styles*/
+
+/*Archive page styles I guess?*/
+.archive-post-thumbnail {
+	float: right;
+	margin: 1em 1em 3em;
+}
 
 
 /*Media Queries*/
