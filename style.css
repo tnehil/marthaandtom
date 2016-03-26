@@ -101,59 +101,59 @@ blockquote {
 	margin-right: 4em;
 }
 
-	/*General Rules for Lists*/
-		ol {
-			counter-reset: li;
-			margin-left: 0;
-			padding-left:0;
-			margin-bottom: 1em;
-		}
+/*General Rules for Lists*/
+	ol {
+		counter-reset: li;
+		margin-left: 0;
+		padding-left:0;
+		margin-bottom: 1em;
+	}
 
-		ol > li {
-			position: relative;
-			margin-left: 2em;
-			list-style: none;
-			font-family: 'Helvetica', 'Sans-serif';
-			font-size: .9em;
-			font-weight: 100;
-			line-height: 1.4em;
-			color: #333;
-		}
+	ol > li {
+		position: relative;
+		margin-left: 2em;
+		list-style: none;
+		font-family: 'Helvetica', 'Sans-serif';
+		font-size: .9em;
+		font-weight: 100;
+		line-height: 1.4em;
+		color: #333;
+	}
 
-		ol > li:before {
-			content: counter(li);
-			counter-increment: li;
-			position: absolute;
-			top: -2em;
-			left: -3em;
-			margin-right: 2em;
-			padding: 2em;
-			color: #ff9933;
-			font-family: 'Populaire';
-		}
+	ol > li:before {
+		content: counter(li);
+		counter-increment: li;
+		position: absolute;
+		top: -2em;
+		left: -3em;
+		margin-right: 2em;
+		padding: 2em;
+		color: #ff9933;
+		font-family: 'Populaire';
+	}
 
-		ul {
-			font-family: 'Helvetica', 'Sans-serif';
-			font-size: .9em;
-			font-weight: 100;
-			line-height: 1.4em;
-			color: #333;
-			list-style-type: none;
-			padding-left: 0;
-			margin-left: 0;
-			margin-bottom: 1em;
-		}
+	ul {
+		font-family: 'Helvetica', 'Sans-serif';
+		font-size: .9em;
+		font-weight: 100;
+		line-height: 1.4em;
+		color: #333;
+		list-style-type: none;
+		padding-left: 0;
+		margin-left: 0;
+		margin-bottom: 1em;
+	}
 
-		ul > li:before {
-			content: "#";
-			font-family: 'Helvetica', 'sans-serif';
-			font-weight: 700;
-			color: #ff9933;
-			margin-right: .7em;
-			margin-left: .8em;
-		}
+	ul > li:before {
+		content: "#";
+		font-family: 'Helvetica', 'sans-serif';
+		font-weight: 700;
+		color: #ff9933;
+		margin-right: .7em;
+		margin-left: .8em;
+	}
 
-	/*End lists*/
+/*End lists*/
 
 .alignright {float:right;}
 .alignleft {float:left;}
