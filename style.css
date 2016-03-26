@@ -21,9 +21,6 @@ Author: Tom Nehil
 		margin-top: 2em;
 	}
 
-	.header {
-	}
-
 	.main {
 		width:100%;
 		float:left;
@@ -310,7 +307,12 @@ a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
 }
 
 .footer-nav select {
-	margin-top:-2em;
+	line-height: 1;
+	padding: 2px;
+	font-family: 'Populaire', 'sans-serif';
+	font-size: .8em;
+	color: #333333;
+	-webkit-appearance: none;
 }
 
 /*Archive page styles I guess?*/

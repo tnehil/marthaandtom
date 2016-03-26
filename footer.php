@@ -2,13 +2,13 @@
 			<div class="footer-nav">
 				Browse archives by
 
-				Month:
-				<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+				<label for="archive-dropdown">Month:</label>
+				<select name="archive-dropdown" id="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
 				  <option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
 				  <?php wp_get_archives( 'type=monthly&format=option&show_post_count=1' ); ?>
 				</select>
 
-				Category:
+				<label for="cat">Category:</label>
 				<?php $args = array(
 					show_option_none	 => 'Select Category',
 					'orderby'            => 'NAME',
