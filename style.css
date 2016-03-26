@@ -166,8 +166,10 @@ img.alignleft, .wp-caption.alignleft {margin: .3em 1em .5em 0;}
 /*Rules that apply to body text*/
 
 .entry p {
-	margin-bottom: .45em;
+	margin-bottom: .65em;
 	margin-top: 0em;
+	font-size: 1.2em;
+	line-height: 1.4em;
 }
 
 .wp-caption-text {
@@ -175,8 +177,8 @@ img.alignleft, .wp-caption.alignleft {margin: .3em 1em .5em 0;}
 	color: #999;
 	padding: 0;
 	margin: 0;
-	font-size: .75em;
-	text-align: right;
+	font-size: .9em!important;
+	text-align: left;
 }
 
 .post-info {
@@ -309,6 +311,7 @@ a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
 @media only screen and (max-width: 946px) {.commentlist li div{display:block;}}
 
 @media only screen and (max-width: 650px) {
+	body {margin: 0 5% 0 5%;}
 	.header {position:inherit;}
 	.header h1{width:100%;display:block;}
 	.header .navigation{display:none;}
