@@ -14,7 +14,7 @@ Author: Tom Nehil
 /*PAGE LAYOUT*/
 	body {
 		margin: 0 10% 0 10%;
-		max-width: 1200px;
+		max-width: 800px;
 	}
 
 	body.logged-in {
@@ -36,7 +36,7 @@ Author: Tom Nehil
 	}
 
 	.post {
-		margin: 0 5% 20px 0;
+		margin: 0 0 20px 0;
 	}
 
 	.footer {
