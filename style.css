@@ -351,4 +351,5 @@ a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
 	.commentlist li div{display:block;}
 	#searchform{width: 100%; margin: 0 0 1em;}
 	#searchform input{margin-top:0;}
+	.archive-post-thumbnail {max-width:25%}
 }
