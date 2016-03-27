@@ -43,6 +43,8 @@ Author: Tom Nehil
 		margin-bottom: 1em;
 	}
 
+
+
 /*General Typographic*/
 
 body {
@@ -331,6 +333,10 @@ a#cancel-comment-reply-link {color:#f93;font-size:.8em;}
 
 
 /*Media Queries*/
+@viewport{
+	zoom: 1.0;
+	width: device-width;
+}
 
 @media only screen and (max-width: 946px) {.commentlist li div{display:block;}}
 
