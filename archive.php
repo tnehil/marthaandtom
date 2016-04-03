@@ -37,15 +37,16 @@
 
 				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
 
-				<h3 class="postmeta"><?php if (!is_author()) : _e('By','marthaandtom') ;?> <a href="<?php echo bloginfo('url') .'/'. the_author() ?>"><?php the_author() ?></a> // <?php endif;?> <span class="grey"><?php the_time(__('j F Y', 'marthaandtom')) ?> in: <?php echo get_the_category_list(', '); ?></span> &nbsp; <span class="orange"><?php comments_popup_link(__('No comments', 'marthaandtom'), __('1 comment', 'marthaandtom'), __('% comments', 'marthaandtom'), '','' ); ?></span></h3>
+				<h3 class="postmeta"><?php if (!is_author()) : _e('By','marthaandtom') ;?> <a href="<?php echo bloginfo('url') .'/'. the_author() ?>"><?php the_author() ?></a> // <?php endif;?> <span class="grey"><?php the_time(__('j F Y', 'marthaandtom')) ?> in: <?php echo get_the_category_list(', '); ?></span></h3>
 
 				<div class="entry">
 					<?php the_excerpt(__('Keep reading &raquo;', 'marthaandtom')); ?>
 				</div>
 
-				<div class="tags">
-					<?php the_tags('', ', ', ''); ?> <?php edit_post_link(__('Edit', 'marthaandtom'), ' | ', ''); ?>
-				</div>
+				<p class="after-entry-links">
+					<span class="orange"><?php just_comments_popup_link(__('No comments', 'marthaandtom'), __('1 comment', 'marthaandtom'), __('% comments', 'marthaandtom'), '','' ); ?></span>
+					<?php the_tags( ' | <span class="grey">' . __('', 'marthaandtom') . ' ', ', ', '</span>'); ?>
+				</p>
 			</div>
 
 		<?php endwhile; ?>

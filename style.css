@@ -184,10 +184,14 @@ img.alignleft, .wp-caption.alignleft {margin: .3em 1em .5em 0;}
 	text-align: left;
 }
 
-p.tags {
+.after-entry-links {
 	margin-bottom: 2em;
-	font-size: .9em;
-	font-family: Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-family: 'Populaire', 'Helvetica', 'sans-serif';
+}
+
+.after-entry-links a {
+	text-decoration: none;
 }
 
 .post-info {

@@ -7,13 +7,16 @@
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<h1><?php the_title(); ?></h1>
 
-			<h3 class="postmeta space-under"><?php _e('By','marthaandtom');?> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a> // <span class="grey"><?php printf( __('Posted %1$s in: %2$s','marthaandtom'), get_the_time(__('j F, Y', 'marthaandtom')), get_the_category_list(', ')) ;?></span> &nbsp; <span class="orange"><?php just_comments_popup_link(__('No comments', 'marthaandtom'), __('1 comment', 'marthaandtom'), __('% comments', 'marthaandtom'), '','' ); ?></span></h3>
+			<h3 class="postmeta space-under"><?php _e('By','marthaandtom');?> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a> // <span class="grey"><?php printf( __('Posted %1$s in: %2$s','marthaandtom'), get_the_time(__('j F, Y', 'marthaandtom')), get_the_category_list(', ')) ;?></span></h3>
 
 			<div class="entry">
 
 				<?php the_content(); ?>
 
-				<?php the_tags( '<p class="tags">' . __('Tags:', 'marthaandtom') . ' ', ', ', '</p>'); ?>
+				<p class="after-entry-links">
+					<span class="orange"><?php just_comments_popup_link(__('No comments', 'marthaandtom'), __('1 comment', 'marthaandtom'), __('% comments', 'marthaandtom'), '','' ); ?></span>
+					<?php the_tags( ' | <span class="grey">' . __('', 'marthaandtom') . ' ', ', ', '</span>'); ?>
+				</p>
 
 				<p class="post-info">
 						This entry was posted by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a>
