@@ -7,7 +7,7 @@
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<h1><?php the_title(); ?></h1>
 
-			<h3 class="postmeta space-under"><?php _e('By','marthaandtom');?> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a> // <span class="grey"><?php printf( __('Posted %1$s in: %2$s','marthaandtom'), get_the_time(__('j F, Y', 'marthaandtom')), get_the_category_list(', ')) ;?></span></h3>
+			<h3 class="postmeta space-under"><?php _e('By','marthaandtom');?> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a> // <span class="grey"><?php printf( __('Posted <span class="orange">%1$s</span> in: %2$s','marthaandtom'), get_the_time(__('j F, Y', 'marthaandtom')), get_the_category_list(', ')) ;?></span></h3>
 
 			<div class="entry">
 
