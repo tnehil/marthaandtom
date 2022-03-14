@@ -15,6 +15,7 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_url')?>/img/ipad-icon.png" />
 		<meta name="verify-v1" content="6d75eGz8VNZ2GOQQxWvDYcunHcVEhW9oqDUiupoNFf4=" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 			  wp_head();
 		?>
