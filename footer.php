@@ -10,9 +10,9 @@
 
 				<label for="cat">Category:</label>
 				<?php $args = array(
-					show_option_none	 => 'Select Category',
-					'orderby'            => 'NAME',
-					'show_count'         => 1,
+					'show_option_none' => 'Select Category',
+					'orderby' => 'NAME',
+					'show_count' => 1,
 				); ?>
 				<?php wp_dropdown_categories( $args ); ?>
 
