@@ -43,6 +43,10 @@ Author: Tom Nehil
 		margin-bottom: 1em;
 	}
 
+	figure {
+		margin-bottom: 1rem;
+	}
+
 
 
 /*General Typographic*/
@@ -61,7 +65,7 @@ a {
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Populaire', 'Helvetica', Sans-Serif;
-	margin: .5em 0 .15em; 0;
+	margin: .5em 0 .15em 0;
 	color: #666;
 }
 
